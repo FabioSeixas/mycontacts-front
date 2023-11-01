@@ -4,6 +4,6 @@ describe('template spec', () => {
 
     cy.contains('Novo Contato').click();
 
-    cy.url({ timeout: 10000 }).should('include', 'new');
+    cy.url({ timeout: 3000 }).should('include', 'new123');
   });
 });
