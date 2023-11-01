@@ -14,3 +14,10 @@ jobs:
         with:
           # build: npm run build
           start: npm run start
+
+  build:
+    needs: cypress-run
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Build
+        run: npm run build
