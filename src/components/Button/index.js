@@ -12,6 +12,7 @@ export default function Button({
 }) {
   return (
     <StyledButton
+      data-cy={"generic-button"}
       danger={danger}
       type={type}
       onClick={onClick}
