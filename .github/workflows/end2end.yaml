@@ -24,7 +24,7 @@ jobs:
       api:
         image: ghcr.io/fabioseixas/api-js-ci-end2end:latest
         ports:
-          - 5432:5432
+          - 3001:3001
 
     steps:
       - name: Checkout
