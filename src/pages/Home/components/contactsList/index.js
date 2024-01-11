@@ -23,7 +23,7 @@ export default function ContactsList({
       )}
 
       {filteredContacts.map((contact) => (
-        <Card key={contact.id}>
+        <Card data-testid={contact.name} key={contact.id}>
           <div className="info">
             <div className="contact-name">
               <strong>{contact.name}</strong>
@@ -37,7 +37,11 @@ export default function ContactsList({
             <Link to={`/edit/${contact.id}`}>
               <img src={edit} alt="Editar Contato" />
             </Link>
-            <button type="button" onClick={() => onDeleteContact(contact)}>
+            <button
+              id={`remove-${contact.id}`}
+              type="button"
+              onClick={() => onDeleteContact(contact)}
+            >
               <img src={trash} alt="Excluir" />
             </button>
           </div>
@@ -57,7 +61,7 @@ ContactsList.propTypes = {
       category: PropTypes.shape({
         name: PropTypes.string,
       }),
-    })
+    }),
   ).isRequired,
   orderBy: PropTypes.string.isRequired,
   onToggleOrderBy: PropTypes.func.isRequired,

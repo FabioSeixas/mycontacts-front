@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "db:reset": "node cypress/e2e/db-reset.js"
   },
   "eslintConfig": {
     "extends": [
@@ -35,6 +36,8 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^13.3.0"
+    "@faker-js/faker": "^8.3.1",
+    "cypress": "^13.3.0",
+    "pg": "^8.11.3"
   }
 }
