@@ -15,12 +15,12 @@ async function cleanDB() {
 
   console.log('will clean contacts');
   await client.query(`
-    TRUNCATE TABLE contacts
+    DELETE FROM contacts
   `);
 
   console.log('will clean categories');
   await client.query(`
-      TRUNCATE TABLE categories
+      DELETE FROM categories
   `);
 
   console.log(' clean done');
