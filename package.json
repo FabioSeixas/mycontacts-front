@@ -17,12 +17,6 @@
     "eject": "react-scripts eject",
     "db:reset": "node cypress/e2e/db-reset.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
